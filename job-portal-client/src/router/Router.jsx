@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: "edit-job/:id",
         element: <UpdateJob />,
         loader: ({ params }) =>
-          fetch(`https://mern-jobportal-ckfs.onrender.com/all-jobs/${params.id}`),
+          fetch(`https://job-portal-backend-nhiy.onrender.com/all-jobs/${params.id}`),
       },
       {
         path: "/jobs/:id",
