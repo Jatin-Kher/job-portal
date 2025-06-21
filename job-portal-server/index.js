@@ -1,4 +1,4 @@
- const express = require('express');
+const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
@@ -13,7 +13,7 @@ app.use(cors({
   credentials: true
 }));
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@job-portal-demo.krv6aeo.mongodb.net`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ck4jjv0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,

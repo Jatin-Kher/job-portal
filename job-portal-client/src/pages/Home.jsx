@@ -6,6 +6,8 @@ import Card from "../components/Card";
 import Newsletter from "../components/Newsletter";
 
 const Home = () => {
+  const [position, setPosition] = useState("");
+  const [location, setLocation] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [jobs, setJobs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -106,9 +108,19 @@ const Home = () => {
 
   const result = filteredData(jobs, selectedCategory, query);
 
+  const handlePositionChange = (e) => setPosition(e.target.value);
+  const handleLocationChange = (e) => setLocation(e.target.value);
+
   return (
     <div>
-      <Banner query={query} handleInputChange={handleInputChange} />
+      <Banner
+        position={position}
+        location={location}
+        handlePositionChange={handlePositionChange}
+        handleLocationChange={handleLocationChange}
+        query={query}
+        handleInputChange={handleInputChange}
+      />
 
       {/* main content */}
       <div className="bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
