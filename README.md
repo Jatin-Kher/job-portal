@@ -1,78 +1,155 @@
-# MERN Stack Job Portal
+# MERN Job Portal
 
-Welcome to the MERN Full Stack Job Portal Project! This web application is designed to facilitate job seekers in finding suitable employment opportunities and recruiters in posting and managing job listings. Built using the MERN stack (MongoDB, Express.js, React, Node.js), along with Firebase Authentication and Tailwind CSS, this portal provides a seamless experience for users exploring career opportunities.
+A full-stack Job Portal application built with the MERN stack (MongoDB, Express, React, Node.js) that allows users to search, post, edit, and manage job listings. The project includes user authentication, job filtering, and salary estimation features.
 
-<a href="https://mern-job-portal-eight.vercel.app/">Go Live to Website</a>
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Folder Structure](#folder-structure)
+- [Getting Started](#getting-started)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [Contact](#contact)
+
+---
 
 ## Features
 
-- **User Authentication**: Secure user authentication provided by Firebase Authentication. Users can sign up and log in using email and password.
-- **Job Search**: Job seekers can search for jobs based on various criteria such as job title, location, salary, posting date, work experience, employment type, etc.
-- **Apply for Jobs**: Job seekers can apply for jobs directly through the portal, streamlining the application process.
-- **Recruiter Dashboard**: Recruiters have access to a dashboard where they can post, edit, update, and delete job listings.
-- **Job Filtering**: Users can filter job listings based on different parameters to refine their search results.
-- **Responsive Design**: The portal is optimized for both desktop and mobile devices, ensuring a seamless experience for users on all platforms.
+- User authentication (Sign up, Login, Logout) with Firebase
+- Post, edit, and delete job listings
+- Filter jobs by location, salary, experience, and employment type
+- Search jobs by title or keyword
+- View detailed job information
+- Estimate salaries for various roles
+- Responsive UI with Tailwind CSS
 
-## Technologies Used
+---
 
-- **Frontend**: React.js, Tailwind CSS,Javascript
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: Firebase Authentication
+## Tech Stack
 
-## Installation
+- **Frontend:** React, React Router, Tailwind CSS, React Hook Form, Firebase Auth
+- **Backend:** Node.js, Express, MongoDB
+- **Other:** SweetAlert2, React Select, Vite
 
-To run the MERN Stack Job Portal locally, follow these steps:
+---
 
-1. Clone the repository:
+## Folder Structure
 
-   ```bash
-   git clone https://github.com/yourusername/mern-job-portal.git
+```
+Mern_JobPortal/
+├── job-portal-client/   # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── firebase/
+│   │   ├── pages/
+│   │   ├── router/
+│   │   └── ...
+│   ├── package.json
+│   └── ...
+├── job-portal-server/   # Express backend
+│   ├── index.js
+│   ├── .env
+│   ├── package.json
+│   └── ...
+└── README.md
+```
 
-2. Navigate to the project directory:
+---
 
-   ```bash
-   cd mern-job-portal
+## Getting Started
+
+### Backend Setup
+
+1. **Navigate to the backend folder:**
+   ```sh
+   cd job-portal-server
    ```
 
-3. Install dependencies:
-
-   ```bash
+2. **Install dependencies:**
+   ```sh
    npm install
    ```
 
-4. Create a `.env` file in the root directory and add the required environment variables:
+3. **Configure environment variables:**
+   - Create a `.env` file in `job-portal-server/`:
+     ```
+     DB_USER=your_mongodb_user
+     DB_PASSWORD=your_mongodb_password
+     ```
 
-   ```env
-   REACT_APP_API_KEY=your_firebase_api_key
-   REACT_APP_AUTH_DOMAIN=your_firebase_auth_domain
-   REACT_APP_PROJECT_ID=your_firebase_project_id
-   ```
-
-5. Start the development server:
-
-   ```bash
+4. **Start the backend server:**
+   ```sh
    npm start
    ```
+   The server will run on `http://localhost:5000` by default.
 
-6. Open your browser and visit `http://localhost:5000` to view the application.
+---
 
-## Contributing
+### Frontend Setup
 
-Contributions are welcome! If you'd like to contribute to the MERN Stack Job Portal, please follow these steps:
+1. **Navigate to the frontend folder:**
+   ```sh
+   cd job-portal-client
+   ```
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/my-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/my-feature`).
-6. Create a new Pull Request.
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Start the frontend development server:**
+   ```sh
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173` (or as shown in your terminal).
+
+---
+
+## Environment Variables
+
+- **Backend:**  
+  Set MongoDB credentials in `job-portal-server/.env`.
+
+- **Frontend:**  
+  Firebase configuration is hardcoded in [`src/firebase/firebase.config.js`](job-portal-client/src/firebase/firebase.config.js).  
+  For production, consider using environment variables.
+
+---
+
+## Usage
+
+- **Sign Up / Login:**  
+  Create an account or log in using your email and password.
+
+- **Browse Jobs:**  
+  Use the search bar and sidebar filters to find jobs by title, location, salary, and more.
+
+- **Post a Job:**  
+  Authenticated users can post new jobs via the "Post A Job" page.
+
+- **Edit/Delete Jobs:**  
+  Manage your posted jobs from the "My Jobs" section.
+
+- **Salary Estimation:**  
+  Visit the "Salary estimate" page to view average salaries for various roles.
+
+---
 
 ## Contact
 
-Have questions or suggestions? Feel free to contact us at [xp27anujkumar@gmail.com](mailto:xp27anujkumar.com).
-```
+For any questions, suggestions, or support, feel free to contact me:
 
-You can copy and paste this code directly into your README.md file on GitHub.
-Make sure to replace placeholders like `yourusername`, `your@gmail.com`, and environment variable placeholders with actual values in your project.
-This README provides comprehensive information about your project, including features, installation instructions, contribution guidelines, licensing, and contact information.
+- **Name:** Jatin Kumar  
+- **Email:** jatinkher100@gmail.com  
+- **LinkedIn:** [https://www.linkedin.com/in/jatin-kumar-a0873a289/](https://www.linkedin.com/in/jatin-kumar-a0873a289/)
+
+---
+
+**Happy Coding!**
