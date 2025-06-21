@@ -15,7 +15,7 @@ const MyJobs = () => {
   // console.log(control)
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://mern-jobportal-ckfs.onrender.com/myJobs/${user?.email}`)
+    fetch(`https://job-portal-backend-nhiy.onrender.com/myJobs/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
