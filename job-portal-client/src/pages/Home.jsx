@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://job-portal-backend-nhiy.onrender.com`)
+    fetch(`https://job-portal-backend-nhiy.onrender.com/all-jobs`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
