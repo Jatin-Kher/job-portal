@@ -10,10 +10,7 @@ const Newsletter = () => {
           <FaEnvelopeOpenText /> Email me for jobs
         </h3>
         <p className="text-primary/75 text-base mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae
-          soluta, perspiciatis enim facilis harum maiores minus necessitatibus
-          nesciunt, qui nam esse laboriosam nihil eligendi doloribus rem? Illum,
-          eveniet quisquam!
+          Email me jobs matching my profile
         </p>
         <div className="w-full space-y-4">
           <input
