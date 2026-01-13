@@ -111,10 +111,10 @@ process.on('SIGINT', async () => {
   process.exit(0);
 });
 
-app.use(express.static(path.join(__dirname, "../../job-portal-server/dist")));
+app.use(express.static(path.join(__dirname, "../../job-portal-client/dist")));
 
-app.get('/', (req, res) => {
-  res.send('Hello developer!');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, "../../job-portal-client/dist/index.html"));
 });
 
 app.listen(port, () => {
