@@ -50,7 +50,7 @@ const MyJobs = () => {
   // delete a books
   const handleDelete = (id) => {
     // console.log(id)
-    fetch(`https://mern-jobportal-ckfs.onrender.com/job/${id}`, {
+    fetch(`https://job-portal-backend-nhiy.onrender.com/job/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
